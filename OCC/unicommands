@@ -1,0 +1,81 @@
+==== Untitled ====
+summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block
+,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:setblock ~ ~ ~ activator_rail,auto:1b}
+,Passengers:[{id:MinecartCommandBlock,Command:
+}] }] }
+
+==== Mini Guardian Monument ====
+summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block
+,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:"setblock ~ ~ ~ activator_rail",auto:1b}
+,Passengers:[{id:MinecartCommandBlock,Command:"fill ~1 ~-2 ~-2 ~5 ~2 ~2 stained_glass 3"
+,Passengers:[{id:MinecartCommandBlock,Command:"fill ~2 ~-1 ~-1 ~4 ~1 ~1 water"
+,Passengers:[{id:MinecartCommandBlock,Command:"fill ~1 ~-2 ~-2 ~5 ~-2 ~2 prismarine 2"
+,Passengers:[{id:MinecartCommandBlock,Command:"fill ~1 ~2 ~-2 ~5 ~2 ~2 prismarine 1"
+,Passengers:[{id:MinecartCommandBlock,Command:"setblock ~3 ~2 ~ sea_lantern"
+,Passengers:[{id:MinecartCommandBlock,Command:"setblock ~3 ~-2 ~ sea_lantern"
+,Passengers:[{id:MinecartCommandBlock,Command:"summon Guardian ~3 ~ ~"
+,Passengers:[{id:MinecartCommandBlock,Command:"kill @e[type=MinecartCommandBlock,r=1]"
+}] }] }] }] }] }] }] }] }] }
+
+==== v2 ====
+summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block
+,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:"setblock ~ ~ ~ activator_rail",auto:1b},Passengers:
+[{id:MinecartCommandBlock,Command:"fill ~1 ~-2 ~-2 ~5 ~2 ~2 stained_glass 9"}
+,{id:MinecartCommandBlock,Command:"fill ~2 ~-1 ~-1 ~4 ~1 ~1 water"}
+,{id:MinecartCommandBlock,Command:"fill ~1 ~-2 ~-2 ~5 ~-2 ~2 prismarine 2"}
+,{id:MinecartCommandBlock,Command:"fill ~1 ~2 ~-2 ~5 ~2 ~2 prismarine 1"}
+,{id:MinecartCommandBlock,Command:"setblock ~3 ~2 ~ sea_lantern"}
+,{id:MinecartCommandBlock,Command:"setblock ~3 ~-2 ~ sea_lantern"}
+,{id:MinecartCommandBlock,Command:"summon Guardian ~3 ~ ~ {Elder:1b}"}
+,{id:MinecartCommandBlock,Command:"kill @e[type=MinecartCommandBlock,r=1]"}
+]}]}
+
+==== 1.9 One Command Template ====
+> Start with this:
+summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block
+,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:setblock ~ ~ ~ activator_rail,auto:1b},Passengers:
+[
+]}]}
+
+> To add commands, paste this before the end brackets (don't include the comma if it's the first command)
+,{id:MinecartCommandBlock,Command:}
+
+> So it looks like this
+summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block
+,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:setblock ~ ~ ~ activator_rail,auto:1b},Passengers:
+[{id:MinecartCommandBlock,Command:}
+]}]}
+
+> You can put the command in between the quotation marks for the Command datatag.
+> The command block minecarts will act like repeat command blocks so you should put this at the last command block
+kill @e[type=MinecartCommandBlock,r=1]
+> The command blocks run in order
+
+==== BEFORE ====
+execute @a[ry=70,rym=-70,rxm=-50,rx=60,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~ ~ ~1
+execute @a[ry=-110,rym=110,rxm=-50,rx=60,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~ ~ ~-1
+execute @a[ry=160,rym=20,rxm=-50,rx=60,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~-1 ~ ~
+execute @a[ry=-20,rym=-160,rxm=-50,rx=60,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~1 ~ ~
+execute @a[rx=-20,rxm=-90,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~ ~1 ~
+execute @a[rxm=30,rx=90,score_speed_min=1,score_speed=1] ~ ~ ~ tp @e[type=Bat,r=0,c=1] ~ ~-1 ~
+
+detect ~ ~ ~ air
+
+execute @e[type=Wolf,name=HoverCart] ~ ~ ~ summon MinecartRideable ~ ~1 ~ {Riding:{id:"Bat",NoAI:1,Silent:1}}
+kill @e[type=Wolf,name=HoverCart]
+scoreboard players set @a speed 1 {SelectedItem:{id:minecraft:emerald}}
+scoreboard players set @a speed 0
+
+==== ROCKET BOOTS ====
+/summon FallingSand ~ ~1 ~ {Block:stone,Data:0,Time:1,DropItem:0,
+Passengers:[{id:"FallingSand",Block:repeating_command_block,Data:1,
+TileEntityData:{auto:1b,Command:scoreboard players set @a HavingBoots 0},
+Time:1,DropItem:0,Passengers:[{id:"FallingSand",Block:chain_command_block,Data:1,
+TileEntityData:{auto:1b,Command:scoreboard players set @a HavingBoots 1 {Inventory:
+[{Slot:100b,id:"minecraft:leather_boots"}]}},Time:1,DropItem:0,Passengers:[{id:"FallingSand",
+Block:chain_command_block,Data:1,TileEntityData:{auto:1b,
+Command:execute @a[score_HavingBoots_min=1,rxm=-180] ~ ~ ~ effect @p 25 1 10 true},
+Time:1,DropItem:0,Passengers:[{id:"FallingSand",Block:chain_command_block,Data:1,
+TileEntityData:{auto:1b,Command:execute @a[score_HavingBoots_min=1,rxm=-50] ~ ~ ~ particle explode ~ ~-1 ~ 0 -1 0 0 100},
+Time:1,DropItem:0,Passengers:[{id:"FallingSand",Block:chain_command_block,Data:1,TileEntityData:{auto:1b,
+Command:execute @a[score_HavingBoots_min=1,rx=-180] ~ ~ ~ effect @p clear},Time:1,DropItem:0}]}]}]}]}]}

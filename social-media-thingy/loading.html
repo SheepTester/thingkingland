@@ -1,0 +1,50 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ -->
+	<head>
+		<title>Test</title>
+		<style>
+@keyframes one {
+    0%   {transform: perspective(100px) rotateX(0deg);}
+	25%  {transform: perspective(100px) rotateX(180deg);}
+    100% {transform: perspective(100px) rotateX(180deg);}
+}
+@keyframes two {
+    0%   {transform: perspective(100px) rotateY(0deg);}
+    25%  {transform: perspective(100px) rotateY(0deg);}
+    50%  {transform: perspective(100px) rotateY(180deg);}
+    100% {transform: perspective(100px) rotateY(180deg);}
+}
+@keyframes three {
+    0%   {transform: perspective(100px) rotateX(180deg);}
+    50%  {transform: perspective(100px) rotateX(180deg);}
+    75%  {transform: perspective(100px) rotateX(0deg);}
+    100% {transform: perspective(100px) rotateX(0deg);}
+}
+@keyframes four {
+    0%   {transform: perspective(100px) rotateY(180deg);}
+    75%  {transform: perspective(100px) rotateY(0deg);}
+    100% {transform: perspective(100px) rotateY(0deg);}
+}
+#center {
+	position: absolute;
+	left:0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	height: 50px;
+	width: 50px;
+}
+#happy {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background: #333;
+	animation: one 1s infinite, two 1s infinite, three 1s infinite, four 1s infinite;
+}
+		</style>
+	</head>
+	<body>
+		<div id="center"><div id="happy"></div></div>
+	</body>
+</html>

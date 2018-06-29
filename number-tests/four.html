@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>Four</title>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: 'Oswald', sans-serif;
+				background: black;
+				color: white;
+				margin: 0;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				cursor: crosshair;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			#cookie {
+				margin-top: 100px;
+				margin-left: 200px;
+				width: 360px;
+				height: 260px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			#cookie:hover {
+				margin-top: 64px;
+				margin-left: 174px;
+				width: 432px;
+				height: 312px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			#cookie:active {
+				margin-top: 136px;
+				margin-left: 226px;
+				width: 288px;
+				height: 208px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			div {
+				height: 60px;
+				font-size: 40px;
+				transition: height .5s, font-size .5s, background .5s;
+			}
+			div:hover {
+				height: 75px;
+				font-size: 50px;
+				transition: height .5s, font-size .5s, background .5s;
+			}
+			div:active {
+				height: 45px;
+				font-size: 30px;
+				transition: height .5s, font-size .5s, background .5s;
+			}
+			#sheep {font-size: 100px;margin:0;}
+			#helpers {background: #F44336;}
+			#helpers:hover {background: #D32F2F;}
+			#helpers:active {background: #EF5350;}
+			#spawners {background: #FF5722;}
+			#spawners:hover {background: #E64A19;}
+			#spawners:active {background: #FF7043;}
+			#facts {background: #FF9800;}
+			#facts:hover {background: #F57C00;}
+			#facts:active {background: #FFA726;}
+			#farms {background: #FFC107;}
+			#farms:hover {background: #FFA000;}
+			#farms:active {background: #FFCA28;}
+			#lands {background: #FFEB3B;}
+			#lands:hover {background: #FBC02D;}
+			#lands:active {background: #FFEE58;}
+			#moms {background: #CDDC39;}
+			#moms:hover {background: #AFB42B;}
+			#moms:active {background: #D4E157;}
+			#citys {background: #8BC34A;}
+			#citys:hover {background: #689F38;}
+			#citys:active {background: #9CCC65;}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="four.js"></script>
+	</head>
+	<body>
+		<img id="cookie" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Lundy_sheep_(head_detail).JPG">
+		<!-- Prices: 10, 100, 500, 5000, 10000, 50000, 200000, 150000, 2M, 100M, 5B, 75B -->
+		<!-- Gets:   .1, 0.5, 005, 0010, 00050, 00100, 000500, 005000, 10K, 1HK, 1M, 10M -->
+		<h1 id="sheep">Sheep: 0</h1>
+		<div id="helpers">Buy Helper | Cost: -10 s | Benefit: +1 s / sec</div>
+		<h1 id="helper">Helpers: 0</h1>
+		<div id="spawners">Buy Sheep Spawner | Cost: -100 s | Benefit: +10 s / sec</div>
+		<h1 id="spawner">Sheep Spawners: 0</h1>
+		<div id="facts">Buy Sheep Factory | Cost: -1K s | Benefit: +100 s / sec</div>
+		<h1 id="fact">Sheep Factories: 0</h1>
+		<div id="farms">Buy Sheep Farm | Cost: -10K s | Benefit: +1K s / sec</div>
+		<h1 id="farm">Sheep Farms: 0</h1>
+		<div id="lands">Buy SheepLand | Cost: -100K s | Benefit: +10K s / sec</div>
+		<h1 id="land">SheepLands: 0</h1>
+		<div id="moms">Buy Mama Sheep | Cost: -1M s | Benefit: +100K s / sec</div>
+		<h1 id="mom">Mama Sheep: 0</h1>
+		<div id="citys">Buy Sheep City | Cost: -10M s | Benefit: +1M s / sec</div>
+		<h1 id="city">Sheep Cities: 0</h1>
+	</body>
+</html>

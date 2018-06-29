@@ -1,0 +1,23 @@
+body {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	margin:0;
+	color: white;
+	background: black;
+}
+::selection {
+	background: rgba(0, 188, 212,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+}

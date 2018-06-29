@@ -1,0 +1,245 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ -->
+	<head>
+		<title>OCC v2</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+		<style>body {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	margin:0;
+	color: white;
+	background: black;
+}
+#background {
+	background-image: url(http://vignette1.wikia.nocookie.net/animal-jam-clans-1/images/5/55/Forest-At-Night-21.jpg/revision/latest?cb=20151221203425);
+	-webkit-filter: blur(10px);
+	width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+	top: -15px;
+	left: -15px;
+}
+#white {
+	background: white;
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+}
+p {
+	margin: 0;
+}
+::selection {
+	background: rgba(0, 188, 212,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	height: 100%;
+	width:100%;
+	display: flex;
+	flex-flow: column;
+}
+#note {
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 300px;
+	width: 500px;
+	background: white;
+	box-shadow: 0 1px 3px black;
+	color: #333;
+	display: none;
+}
+h1 {
+	margin: 0 10px;
+	font-size: 40px;
+	flex: 0 1 40px;
+}
+#note p {
+	margin: 0 10px;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+#note #close {
+	position: absolute;
+	margin: 10px;
+	padding: 0;
+	font-size: 10px;
+	bottom: 0;
+	right: 0;
+}
+#sig {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    right: 5px;
+}
+#help {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    left: 5px;
+}
+a, #elp {
+	color: #607D8B;
+	text-decoration: none;
+}
+a:hover, #elp:hover {
+	border-bottom: #607D8B 1px solid;
+}
+a:active, #elp:active {
+	color: white;
+	border-bottom: white 1px solid;
+}
+#add {
+	color: #607D8B;
+	font-size: 40px;
+	padding-left: 10px;
+	opacity: 1;
+	flex: 0 1 40px;
+	width: 40px;
+}
+#add:hover {
+	opacity: 0.8;
+}
+#add:active {
+	color: white;
+}
+li {
+	display: flex;
+	flex-flow: row;
+}
+#cmmd {
+	margin:0;
+	padding:0 10px;
+	overflow: scroll;
+	flex: 1 1 auto;
+}
+.eq {
+	height: 40px;
+	font-size: 30px;
+	border: 0;
+	font-family: 'Comfortaa', sans-serif;
+	border-bottom: #607D8B 1px solid;
+	margin-bottom: 1px;
+	width: 100%;
+	background: none;
+	color: white;
+}
+.eq:focus {
+	outline: none;
+	border-bottom: #607D8B 2px solid;
+	height: 41px;
+	margin-bottom: 0;
+}
+.del, .drag {
+	font-size: 40px;
+	color: #607D8B;
+	opacity: 1;
+	display: inline-block;
+}
+.del:hover, .drag:hover {
+	opacity: 0.8;
+}
+.del:active, .drag:active {
+	color:white;
+}
+.ui-sortable-helper {
+	position:fixed !important;
+}
+textarea {
+	margin-bottom: 25px;
+	background: rgba(255,255,255,0.2);
+	border: none;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 30px;
+	height: 100px;
+	color: white;
+}
+textarea:focus{
+	outline: none;
+}</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="container">
+			<h1>One Command Creator 1.9</h1>
+			<i class="material-icons" id="add">add_circle</i>
+			<ul id="cmmd"></ul>
+			<textarea spellcheck=false></textarea>
+		</div>
+		<div id="note">
+			<h1>Help and bugs and credits</h1>
+			<p>Click on the plus icon to add a command. Then enter the command. You can then drag the command around or delete it.</p>
+			<p>Works best for 1.9 versions. This creates a bunch of command block minecarts, which might lag the world.</p>
+			<p>You can put "kill @e[type=MinecartCommandBlock,r=1]" as the last command if you want them to run once.</p>
+			<p>Thanks to Google Fonts for Comfortaa and Material icons, Google Search for HTML help, etc. etc.</p>
+			<p id="close">Click on 'help' again to close</p>
+		</div>
+		<p id="sig">Made by <a href="https://plus.google.com/u/0/101749103627562194088/">Sean</a></p>
+		<div id="white"></div>
+		<p id="help"><span id="elp">Help</span></p>
+		<script type="text/javascript">if (typeof jQuery == "undefined") {
+	alert('jQuery is not installed!');
+}
+setTimeout(function(){$('#white').animate({
+	height:"0%",
+},500);}, 100);
+if (!(!!window.chrome && !!window.chrome.webstore)){
+	alert("Warning: this was made and tested in Google Chrome so it might not work in other browsers.");
+}
+var showingHelp = false;
+$("#help").click(function(){
+	if (showingHelp){
+		$("#note").fadeOut();
+	} else {
+		$("#note").fadeIn();
+	}
+	showingHelp = !showingHelp;
+});
+function generate() {
+	var cmmd = "summon FallingSand ~ ~1 ~ {Time:1,Block:redstone_block,Passengers:[{id:FallingSand,Time:1,Block:command_block,TileEntityData:{Command:setblock ~ ~ ~ activator_rail,auto:1b},Passengers:["
+	for(var i=0;i<$("li").length;i++){
+		if(i>0){cmmd+=",";}
+		cmmd+="{id:MinecartCommandBlock,Command:"+$("li input").eq(i).val()+"}";
+	}
+	cmmd+="]}]}";
+	return cmmd;
+}
+$("textarea").val(generate());
+$("#add").click(function(){
+	$("#cmmd").append('<li><i class="drag material-icons">drag_handle</i><i class="del material-icons">delete</i><input class="eq" autocomplete="off"spellcheck="false" placeholder="Command"/></li>');
+	$("li input").last().focus();
+	$("textarea").val(generate());
+	$("input").keyup(function(){
+		$("textarea").val(generate());
+	});
+});
+$(document).on('click','.del', function(){
+	$(this).closest('li').remove();
+	$("textarea").val(generate());
+});
+$(document).on('click','.drag', function(){
+	$("textarea").val(generate());
+});
+$("#cmmd").sortable();</script>
+	</body>
+</html>

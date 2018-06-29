@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Seven</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				font-family: 'Roboto', sans-serif;
+				background: white;
+				color: black;
+				margin: 0;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			input[type="text"] {
+				font-family: 'Roboto', sans-serif;
+				border: 0;
+				background: 0;
+				color: white;
+				font-size: 50px;
+				margin-left: 20px;
+				margin-top: 10px;
+				width: 95%;
+				height: 60px;
+			}
+			input[type="text"]:focus {
+				border-bottom: solid 2px white;
+				outline: none;
+			}
+			::-webkit-input-placeholder {
+				color: #64B5F6;
+			}
+			ul {
+				padding-top: 100px;
+			}
+			li {
+				display: block;
+				font-size: 50px;
+				background: #E6E6E6;
+				border-radius: 40px;
+				margin-bottom: 10px;
+				margin-right: 40px;
+				word-wrap: break-word;
+			}
+			#header {
+				background: #2196F3;
+				box-shadow: 0 0 10px black;
+				width: 100%;
+				position: fixed;
+				height: 90px;
+			}
+			p {
+				padding-top: 10px;
+				padding-left: 10px;
+				padding-bottom: 10px;
+				margin: 0;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="seven.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<form id="form">
+				 <input type="text" name="text" placeholder="Message" autocomplete="off"/>
+				 <br/><br/>
+			</form>
+		</div>
+		<ul>
+		</ul>
+	</body>
+</html>

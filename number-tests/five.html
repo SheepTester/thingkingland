@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Five</title>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				font-family: 'Oswald', sans-serif;
+				background: black;
+				color: white;
+				margin: 0;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				cursor: crosshair;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			ul {
+				padding: 0;
+				font-size: 0
+			}
+			li {
+				display: inline-block;
+				transition: background .5s;
+				height: 160px;
+				width: 160px;
+				text-align: center;
+				font-size: 30px;
+			}
+			li .label {margin-top: 35px;margin-bottom: 0;}
+			li .count {margin-top: 10px;margin-bottom: 0;}
+			li .name {margin-top: 15px;margin-bottom: 0;}
+			li .info {margin-top: 10px;margin-bottom: 0; font-size: 15px;}
+			#wood {background:#825201;}
+			#wood:hover {background:#B67402;}
+			#stone {background:#8B8D7A;}
+			#stone:hover {background:#A4A696;}
+			#axe {background:#2196F3;}
+			#axe:hover {background:#64B5F6;}
+			#pick {background:#03A9F4;}
+			#pick:hover {background:#4FC3F7;}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="five.js"></script>
+	</head>
+	<body>
+		<ul>
+			<li id="wood"><p class="label">Wood</p><p class="count">0</p></li>
+			<li id="stone"><p class="label">Stone</p><p class="count">0</p></li>
+		</ul>
+		<ul>
+			<li id="axe"><p class="name">Axe</p><p class="info">10 wood</p><p class="count">1</p></li>
+			<li id="pick"><p class="name">Pick</p><p class="info">3 wood, 10 stone</p><p class="count">1</p></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+/* SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ */
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 50px;
+	margin:0;
+	color: #555;
+	background: #eee;
+    line-height: 1;
+}
+p {
+	margin: 0;
+}
+::selection {
+	background: rgba(0, 188, 212,0.4);
+}
+#menu {
+	height: 100px;
+	width: 100px;
+	position: fixed;
+	top: -20;
+	left: -20;
+	border-bottom-right-radius: 80px;
+	box-shadow: 0 0 10px #888;
+	z-index: 1000;
+	transition: top .5s, left .5s, box-shadow .5s, border-radius .5s;
+}
+#menu:hover {
+	top: -10;
+	left: 0;
+	border-bottom-right-radius: 100px;
+	box-shadow: 0 0 15px #888 !important;
+}
+#menu:active {
+	box-shadow: 0 0 2px #888 !important;
+	transition: box-shadow .2s;
+}
+#mn {
+	position: fixed;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	background: white;
+	box-shadow: 0 0 5px #888;
+	padding: 100px 20px;
+	margin: 0;
+	transition: left .5s cubic-bezier(0, 0, 0, 1);
+}
+#mn li {
+	display: block;
+	padding-bottom: 10px;
+}
+#mn a {
+	color: #607D8B;
+	text-decoration: none;
+}
+#mn a:hover {
+	border-bottom: 1px solid #607D8B;
+}
+#mn a:active {
+	color: #00BCD4;
+	border-bottom-color: #00BCD4;
+}
+#container {
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: auto;
+	height: 100%;
+	width: 600px;
+}
+.paper {
+	background: white;
+	margin-top: 30px;
+	box-shadow: 0 1px 3px #aaa;
+	padding: 10px;
+	font-size: 20px;
+    word-wrap: break-word;
+}
+#edit:focus {
+	outline: none;
+}
+.button {
+	font-size: 20px;
+	border: 1px solid #607D8B;
+	border-radius: 5px;
+	padding: 5px;
+	display: inline-block;
+	color: #607D8B;
+}
+.button:hover {
+	background: #607D8B;
+	color: white;
+}
+.button:active {
+	background: #00BCD4;
+	border-color: #00BCD4;
+	color: white;
+}
+#postPost {
+	margin-top: 10px;
+}
+.ibutt {
+	color: #607D8B;
+	font-size: 30px !important;
+    position: relative;
+    top: 7px;
+}
+.ibutt:hover {
+	color: #00BCD4;
+}
+.ibutt:active {
+	color: #00BCD4;
+	background: rgba(0,0,0,0.1);
+	border-radius: 50%;
+}
+.noSel {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+ 	-ms-user-select: none;
+	user-select: none; 
+}
+#cancel:hover, #cancel:active {
+	color: #f44336;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+#posts {
+	margin-bottom: 30px;
+}

@@ -1,0 +1,58 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/+SeanYentheHumansperson -->
+	<head>
+		<title>Hellos</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="index.css" rel="stylesheet">
+		<meta name="description" content="Thingking - A wonderous place where Sean becomes productive." />
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td rowspan="4" id="info"><h1>Hi!</h1><p><strong>This is <a href="https://plus.google.com/u/0/+SeanYentheHumansperson">Sean</a>.</strong> He tests. Otherwise<br>he is<br>unproductive.</p></td>
+				<a href=""><td colspan="2" rowspan="2" id="house"></td></a>
+				<!--TD-->
+				<a href=""><td>THE HOTEL</td></a>
+				<a href=""><td rowspan="2" id="calc"></td></a>
+			</tr>
+			<tr>
+				<!--TD-->
+				<!--TD-->
+				<a href=""><td>SHF</td></a>
+				<!--TD-->
+			</tr>
+			<tr>
+				<a href=""><td id="occ"></td></a>
+				<a href=""><td class="smaller">RANDOM SENTENCE GENERATOR</td></a>
+				<a href=""><td colspan="2" id="annoy"></td></a>
+				<!--TD-->
+			</tr>
+			<tr>
+				<a href=""><td id="draw"></td></a>
+				<a href=""><td id="turt"></td></a>
+				<a href=""><td>ROSHAM<br>BO</td></a>
+				<a href=""><td id="pfpf"></td></a>
+			</tr>
+		</table>
+		<script>
+			test();
+			function test() {
+				var vh=Math.max(document.documentElement.clientHeight, window.innerHeight || 0)-25,j=Math.floor(vh/4)+"px";
+				for(var i=0;i<document.querySelectorAll("td").length;i++) {
+					document.querySelectorAll("td")[i].style.maxHeight=j;
+					document.querySelectorAll("td")[i].style.maxWidth=j;
+					document.querySelectorAll("td")[i].style.height=j;
+					document.querySelectorAll("td")[i].style.width=j;
+				}
+			}
+			window.addEventListener("resize", test);
+			setInterval(function(){
+				var d=["b71c1c","880E4F","4A148C","311B92","1A237E","0D47A1","01579B","006064","004D40","1B5E20","33691E","827717","F57F17","FF6F00","E65100","BF360C","3E2723","212121","263238","000"];
+				document.body.style.background="#"+d[Math.floor(Math.random()*d.length)];
+			}, 1000);
+		</script>
+	</body>
+</html>

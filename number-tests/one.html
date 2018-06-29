@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>One</title>
+		<style>
+			p {
+				color: #8BC34A;
+			}
+			#zero td {
+				background: #388E3C;
+				height: 10px;
+				width: 10px;
+			}
+			#one {border-spacing: 10px;}
+			#one td {
+				height: 80px;
+				width: 80px;
+			}
+			<!--td:hovr {border: 10px solid rgb(255,255,255);height: 70px;width: 70px;}-->
+			#one .two {height: 160px;}
+			#one .three {height: 160px;width: 160px;}
+			#one .four {height: 320px;width: 320px;}
+			body {
+				background: url("http://www.windows8backgrounds.net/wallpapers/windows-8-planet-wallpaper.jpg");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+		</style>
+	</head>
+	<body>
+		<table id="one">
+			<tr> <!-- 1 -->
+				<td colspan="4" rowspan="2" style="background: #2d89ef;"></td>
+				<td colspan="2" rowspan="2" style="background: #603cba;"></td>
+				<td colspan="2" rowspan="2" style="background: #2d89ef;"></td>
+				<td style="background: #b91d47;"></td>
+				<td style="background: #da532c;"></td>
+			</tr>
+			<tr> <!-- 2 -->
+				<td style="background: #00a300;"></td>
+				<td style="background: #9f00a7;"></td>
+			</tr>
+			<tr> <!-- 3 -->
+				<td colspan="4" class="two" style="background: #603cba;"></td>
+				<td colspan="2" class="two" style="background: #00a300;"></td>
+				<td colspan="2" class="two" style="background: #da532c;"></td>
+				<td colspan="2" class="two" style="background: #2b5797;"></td>
+			</tr>
+			<tr> <!-- 5 -->
+				<td colspan="2" class="two" style="background: #da532c;"></td>
+				<td colspan="2" class="two" style="background: rgb(0,189,241);"></td>
+				<td colspan="2" rowspan="3" class="four" style="background: #2d89ef;"></td>
+				<td colspan="2" class="three" style="background: #00aba9;"></td>
+				<td colspan="2" class="three" style="background: #7e3878;"></td>
+			</tr>
+			<tr> <!-- 7 -->
+				<td colspan="2" rowspan="2" class="three" style="background: #ffc40d;"></td>
+				<td style="background: #2b5797;"></td>
+				<td style="background: #603cba;"></td>
+				<td colspan="4" rowspan="2" style="background: #b91d47;"></td>
+			</tr>
+			<tr> <!-- 8 -->
+				<td style="background: rgb(104,102,103);"></td>
+				<td style="background: #2b5797;"></td>
+			</tr>
+		</table>
+	</body>
+</html>

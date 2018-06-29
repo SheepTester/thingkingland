@@ -1,0 +1,85 @@
+body {
+	font-family: 'Montserrat', serif;
+	background: black;
+	margin: 0;
+	transition: background 1s;
+	/*animation: change 5s infinite;*/
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+@keyframes change {
+	0% {background:black;}
+	12.5% {background:#311B92;}
+	25% {background:#0D47A1;}
+	37.5% {background:#006064;}
+	50% {background:#4A148C;}
+	62.5% {background:#880E4F;}
+	75% {background:#1A237E;}
+	87.5% {background:#004D40;}
+	100% {background:black;}
+}
+::selection {
+    background: rgba(0, 188, 212, 0.4) !important;
+}
+table {
+	margin: 0 auto;
+	border-spacing: 5px;
+	table-layout: fixed;
+}
+td {
+	background-color: rgba(255,255,255,0.3);
+	height: 24vh;
+	width: 24vh;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	overflow: hidden;
+	transition: transform .2s;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#info {
+	cursor: default;
+	transform: none !important;
+	min-width: 100px;
+}
+#info p {
+	font-size: 20px;
+	margin: 0;
+}
+#info h1 {
+	font-size: 50px;
+	margin: 0;
+	font-weight: normal;
+}
+#info a {
+	text-decoration: none;
+	color: black;
+}
+#info a:hover {
+	border-bottom: 1px solid black;
+}
+#info a:active {
+	color: white;
+	border-bottom: 1px solid white;
+}
+td:hover {
+	transform: perspective(500px) rotateX(10deg);
+}
+td:active {
+	transform: perspective(500px) rotateX(-10deg);
+}
+.smaller {
+	font-size: 20px;
+}
+#house {background-image:url("images/house.svg");background-position:center;background-repeat:no-repeat;}
+#calc {background-image:url("images/calc.svg");background-position:center;background-repeat:no-repeat;}
+#annoy {background-image:url("images/mail.svg");background-position:center;background-repeat:no-repeat;}
+#occ {background-image:url("images/cmmd.svg");background-position:center;background-repeat:no-repeat;}
+#draw {background-image:url("images/draw.svg");background-position:center;background-repeat:no-repeat;}
+#turt {background-image:url("images/notacontroller.svg");background-position:center;background-repeat:no-repeat;}
+#pfpf {background-image:url("images/pf.svg");background-position:center;background-repeat:no-repeat;}

@@ -1,0 +1,135 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ -->
+	<head>
+		<title>Libs</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+		<style>
+		body {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	margin:0;
+	color: white;
+	background: black;
+}#white {
+	background: white;
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+}
+p {
+	margin: 0;
+}::selection {
+	background: rgba(0, 188, 212,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto;
+	height: 100px;
+	width: 500px;
+	text-align: center;
+}
+#sig {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    right: 5px;
+}
+#help {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    left: 5px;
+}
+a, #elp {
+	color: #607D8B;
+	text-decoration: none;
+}
+a:hover, #elp:hover {
+	border-bottom: #607D8B 1px solid;
+}
+a:active, #elp:active {
+	color: white;
+	border-bottom: white 1px solid;
+}
+#wut {font-size:75px;}#excuse {font-size:25px;}
+
+#note {
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 300px;
+	width: 500px;
+	background: white;
+	box-shadow: 0 1px 3px black;
+	color: #333;
+	display: none;
+}
+#note p {
+	margin: 0 10px;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+#note #close {
+	position: absolute;
+	margin: 10px;
+	padding: 0;
+	font-size: 10px;
+	bottom: 0;
+	right: 0;
+}
+h1 {
+	margin: 0 10px;
+	font-size: 40px;
+	flex: 0 1 40px;
+}
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<p id="wut"><a href="javascript:var s=document.createElement('script');s.type='text/javascript';s.src='//176.32.230.44/thingkingland.com/boredom.js';document.head.appendChild(s);">Libs!</a><p>
+			<p id="excuse">Drag the above link into your bookmarks or just click to play on this page.</p>
+		</div>
+		<div id="note">
+			<h1>Creds</h1>
+			<p>Kickass for inspiration</p>
+			<p>Thanks to Google Fonts for Comfortaa, Google Search for HTML help, etc. etc.</p>
+			<p id="close">Click on 'help' again to close</p>
+		</div>
+		<p id="sig">Made by <a href="https://plus.google.com/u/0/101749103627562194088/">Sean</a></p>
+		<div id="white"></div>
+		<p id="help"><span id="elp">Help</span></p>
+		<script type="text/javascript">
+		if (typeof jQuery == "undefined") {
+	alert('jQuery is not installed!');
+}
+setTimeout(function(){$('#white').animate({
+	height:"0%",
+},500);}, 100);
+var showingHelp = false;
+$("#help").click(function(){
+	if (showingHelp){
+		$("#note").fadeOut();
+	} else {
+		$("#note").fadeIn();
+	}
+	showingHelp = !showingHelp;
+});
+		</script>
+	</body>
+</html>

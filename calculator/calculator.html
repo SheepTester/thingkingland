@@ -1,0 +1,393 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ -->
+	<head>
+		<title>Calculator v3</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href='https://fonts.googleapis.com/css?family=Comfortaa:300' rel='stylesheet' type='text/css'>
+		<style>#calc {
+	height: 50px;
+	background: #607D8B;
+	color: white;
+	width: 180px;
+	padding: 0 10px;
+}
+#calc:hover {
+	background: #455A64;
+}
+#calc:active {
+	background: #90A4AE;
+}
+#eq {
+	height: 50px;
+	font-size: 40px;
+	border: 0;
+	font-family: 'Comfortaa', sans-serif;
+	border-bottom: #607D8B 2px solid;
+	margin-bottom: 2px;
+	width: 100%;
+	background: none;
+	color: white;
+}
+#eq:focus {
+	outline: none;
+	border-bottom: #607D8B 4px solid;
+	height: 52px;
+	margin-bottom: 0;
+}
+body {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	margin:0;
+	color: white;
+	background: black;
+}
+#background {
+	background-image: url(http://vignette1.wikia.nocookie.net/animal-jam-clans-1/images/5/55/Forest-At-Night-21.jpg/revision/latest?cb=20151221203425);
+	-webkit-filter: blur(10px);
+	width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+	top: -15px;
+	left: -15px;
+}
+#white {
+	background: white;
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+}
+::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+#result {
+    font-style: italic;
+	color: rgba(255,255,255,0.5);
+}
+form {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+::selection {
+	background: rgba(0, 188, 212,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	height: 100px;
+	width:100%;
+}
+#note {
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 300px;
+	width: 500px;
+	background: white;
+	box-shadow: 0 1px 3px black;
+	color: #333;
+	display: none;
+}
+#note h1 {
+	margin: 0 10px;
+	font-size: 40px;
+}
+#note p {
+	margin: 0 10px;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+#note #close {
+	position: absolute;
+	margin: 10px;
+	padding: 0;
+	font-size: 10px;
+	bottom: 0;
+	right: 0;
+}
+#sig {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    right: 5px;
+}
+#help {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    left: 5px;
+}
+a, #elp {
+	color: #607D8B;
+	text-decoration: none;
+}
+a:hover, #elp:hover {
+	border-bottom: #607D8B 1px solid;
+}
+a:active, #elp:active {
+	color: white;
+	border-bottom: white 1px solid;
+}</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<div id="background"></div>
+		<div id="container">
+			<form id="validForm">
+				<input name="eq" id="eq" autocomplete="off" spellcheck="false"  placeholder="Equation" autofocus/>
+			</form>
+			<p id="result">=0</p>
+		</div>
+		<div id="note">
+			<h1>Help and bugs and credits</h1>
+			<p>Click on where it says "Equation" to type in an equation. You can use + - * / ^ % () and decimals.</p>
+			<p>Supported functions: sqrt() abs() sin() cos() tan() (in degrees)</p>
+			<p>Bug: Using an expression that equals zero in parentheses and multiplying it with another parentheses or function will return 'Error'</p>
+			<p>Thanks to Google Fonts for Comfortaa, Google Search for HTML help, etc. etc.</p>
+			<p id="close">Click on 'help' again to close</p>
+		</div>
+		<p id="sig">Made by <a href="https://plus.google.com/u/0/101749103627562194088/">Sean</a></p>
+		<div id="white"></div>
+		<p id="help"><span id="elp">Help</span></p>
+		<script type="text/javascript">if (typeof jQuery == "undefined") {
+	alert('jQuery is not installed!');
+}
+function querySt(ji) {
+
+    hu = window.location.search.substring(1);
+    gy = hu.split("&");
+
+    for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+            return ft[1];
+        }
+    }
+}
+if (!querySt("eq")==""){
+	$('#eq').val(querySt("eq"));
+	if ($("#eq").val().toLowerCase().indexOf("the answer to life the universe and everything")>-1){
+		$("#result").html("=42");
+	} else {
+		$("#result").html("="+calculate($("#eq").val(),0));
+	}
+}
+$(document).ready(function() {
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+var ob = [];
+function calculate(e,id){
+	if (id==0){
+		ob = [];
+	}
+	var c = '1234567890.'.split('');
+	var o = 'abcdefghijklmnopqrstuvwxyz+-*/^%'.split('');
+	var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+	var p = '(√|šç¦'.split('');
+	if (id>0&&ob[id]!=[]) {
+		ob[id]=[];
+	} else {
+		ob.push([]);
+	}
+	var i = 0;
+	var wasCaused = 0;
+	for (var l=0;l<e.length;l++){
+		if (e.charAt(l)=="("&&i==0) {
+			if (ob[id][ob[id].length-1]=="sqrt") {
+				ob[id][ob[id].length-1]="√";
+			} else if (ob[id][ob[id].length-1]=="abs") {
+				ob[id][ob[id].length-1]="|";
+			} else if (ob[id][ob[id].length-1]=="sin") {
+				ob[id][ob[id].length-1]="š";
+			} else if (ob[id][ob[id].length-1]=="cos") {
+				ob[id][ob[id].length-1]="ç";
+			} else if (ob[id][ob[id].length-1]=="tan") {
+				ob[id][ob[id].length-1]="¦";
+			} else {
+				ob[id].push("(");
+			}
+			i++;
+			ob[id].push("");
+			wasCaused = "paran";
+		} else {
+			if (i>0) {
+				if (wasCaused=="paran"){
+					if (e.charAt(l)==")"){
+						i--;
+						if (i==0){
+							wasCaused=0;
+						} else {
+							ob[id][ob[id].length-1]+=e.charAt(l);
+						}
+					} else if (c.includes(e.charAt(l))||o.includes(e.charAt(l))) {
+						ob[id][ob[id].length-1]+=e.charAt(l);
+					} else if (e.charAt(l)=="("){
+						i++;
+						ob[id][ob[id].length-1]+=e.charAt(l);
+					}
+				} else if (wasCaused=="negNum"){
+					if (c.includes(e.charAt(l))) {
+						ob[id][ob[id].length-1]+=e.charAt(l);
+					} else {
+						i--;
+						ob[id].push(e.charAt(l));
+						wasCaused=0;
+					}
+				}
+			} else {
+				if (e.charAt(l)=="-"&&!c.includes(e.charAt(l-1))) {
+					if (e.charAt(l+1)=="(") {
+						ob[id].push("(");
+						ob[id].push("-1");
+					} else {
+						ob[id].push("(");
+						i++;
+						ob[id].push("0-");
+						wasCaused = "negNum";
+					}
+				} else {
+					if (o.includes(e.charAt(l))&&!alphabet.includes(e.charAt(l-1))/*&&!o.includes(e.charAt(l-1))*/) {
+						ob[id].push(e.charAt(l));
+					} else if (c.includes(e.charAt(l))&&!c.includes(e.charAt(l-1))) {
+						ob[id].push(e.charAt(l));
+					} else if (c.includes(e.charAt(l))||o.includes(e.charAt(l))){
+						ob[id][ob[id].length-1]+=e.charAt(l);
+					}
+				}
+			}
+		}
+	}
+	if (isNaN(ob[id][ob[id].length-1])&&(
+		o.includes(ob[id][ob[id].length-1])||alphabet.includes(ob[id][ob[id].length-1].charAt(ob[id][ob[id].length-1].length-1))
+	)){
+		ob[id].pop();
+	}
+	if (isNaN(ob[id][0])&&!p.includes(ob[id][0])){
+		ob[id].shift();
+	}
+	
+	if (ob[id].includes("(")||ob[id].includes("√")||ob[id].includes("|")||ob[id].includes("š")||ob[id].includes("ç")||ob[id].includes("¦")){
+		for(var l=0;l<ob[id].length;l++){
+			if (p.includes(ob[id][l])){
+				if (ob[id][l]=="("){
+					ob[id][l+1]=calculate(ob[id][l+1],id+1);
+				} else if (ob[id][l]=="√"){
+					ob[id][l+1]=Math.sqrt(ob[id][l+1]);
+				} else if (ob[id][l]=="|"){
+					ob[id][l+1]=Math.abs(ob[id][l+1]);
+				} else if (ob[id][l]=="š"){
+					ob[id][l+1]=Math.sin(ob[id][l+1]*(Math.PI/180));
+				} else if (ob[id][l]=="ç"){
+					ob[id][l+1]=Math.cos(ob[id][l+1]*(Math.PI/180));
+				} else if (ob[id][l]=="¦"){
+					ob[id][l+1]=Math.tan(ob[id][l+1]*(Math.PI/180));
+				}
+				ob[id].splice(l,1);
+				if (!o.includes(ob[id][l-1])&&!ob[id][l-1]==""){
+					ob[id].splice(l,0,"*");
+				}
+			}
+		}
+	}
+	if (ob[id].includes("^")){
+		for(var l=ob[id].length-2;l>0;l-=2){
+			if (ob[id][l]=="^"){
+				ob[id][l]=Math.pow(Number(ob[id][l-1]),Number(ob[id][l+1]));
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l+=2;
+			}
+		}
+	}
+	if (ob[id].includes("/")||ob[id].includes("*")||ob[id].includes("%")){
+		for(var l=1;l<ob[id].length;l+=2){
+			if (ob[id][l]=="*"){
+				ob[id][l]=Number(ob[id][l-1]) * Number(ob[id][l+1]);
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l-=2;
+			}
+			if (ob[id][l]=="/"){
+				ob[id][l]=Number(ob[id][l-1]) / Number(ob[id][l+1]);
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l-=2;
+			}
+			if (ob[id][l]=="%"){
+				ob[id][l]=Number(ob[id][l-1]) % Number(ob[id][l+1]);
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l-=2;
+			}
+		}
+	}
+	if (ob[id].includes("+")||ob[id].includes("-")){
+		for(var l=1;l<ob[id].length;l+=2){
+			if (ob[id][l]=="+"){
+				ob[id][l]=Number(ob[id][l-1]) + Number(ob[id][l+1]);
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l-=2;
+			}
+			if (ob[id][l]=="-"){
+				ob[id][l]=Number(ob[id][l-1]) - Number(ob[id][l+1]);
+				ob[id].splice(l+1,1);
+				ob[id].splice(l-1,1);
+				l-=2;
+			}
+		}
+	}
+	
+	if (ob[id].length>1){
+		return "Error";
+	} else if (ob[id].length==0||ob[id][0]=="") {
+		return 0;
+	} else {
+		return ob[id].toString();
+	}
+	//return ob;
+}
+$("#eq").keyup(function(){
+	if ($("#eq").val().toLowerCase().indexOf("the answer to life the universe and everything")>-1){
+		$("#result").html("=42");
+	} else {
+		$("#result").html("="+calculate($("#eq").val(),0));
+	}
+});
+setTimeout(function(){$('#white').animate({
+	height:"0%",
+},500);}, 100);
+if (!(!!window.chrome && !!window.chrome.webstore)){
+	alert("Warning: this was made and tested in Google Chrome so it might not work in other browsers.");
+}
+var showingHelp = false;
+$("#help").click(function(){
+	if (showingHelp){
+		$("#note").fadeOut();
+	} else {
+		$("#note").fadeIn();
+	}
+	showingHelp = !showingHelp;
+});</script>
+	</body>
+</html>

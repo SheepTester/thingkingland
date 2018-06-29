@@ -1,0 +1,24 @@
+.box {
+	background: #E91E63;
+	border-right: 1px solid #C2185B;
+}
+.large {
+	font-size: 400%;
+	color: #E91E63;
+	background: #880E4F;
+}
+#stf1 {
+	background: #ff1744;
+}
+#stf2 {
+	background: #FFEA00;
+}
+#stf3 {
+	background: #00E676;
+}
+#stf4 {
+	background: #2979FF;
+}
+.stf {
+	height: 800px;
+}

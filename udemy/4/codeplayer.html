@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>codeplayer</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="codeplayer.css"></link>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="logo">codeplayer</div>
+				<div id="run">run</div>
+				<ul id="toggles">
+					<li class="selected">html</li>
+					<li>css</li>
+					<li>js</li>
+					<li class="selected">result</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="code" id="html">
+				<div class="label">html</div>
+				<textarea></textarea>
+			</div>
+			<div class="code unselect" id="css">
+				<div class="label">css</div>
+				<textarea></textarea>
+			</div>
+			<div class="code unselect" id="js">
+				<div class="label">js</div>
+				<textarea></textarea>
+			</div>
+			<div class="code" id="result">
+				<div class="label">result</div>
+				<iframe id="bubble"></iframe>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="codeplayer.js"></script>
+	</body>
+</html>

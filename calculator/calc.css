@@ -1,0 +1,137 @@
+#calc {
+	height: 50px;
+	background: #607D8B;
+	color: white;
+	width: 180px;
+	padding: 0 10px;
+}
+#calc:hover {
+	background: #455A64;
+}
+#calc:active {
+	background: #90A4AE;
+}
+#eq {
+	height: 50px;
+	font-size: 40px;
+	border: 0;
+	font-family: 'Comfortaa', sans-serif;
+	border-bottom: #607D8B 2px solid;
+	margin-bottom: 2px;
+	width: 100%;
+	background: none;
+	color: white;
+}
+#eq:focus {
+	outline: none;
+	border-bottom: #607D8B 4px solid;
+	height: 52px;
+	margin-bottom: 0;
+}
+body {
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 40px;
+	margin:0;
+	color: white;
+	background: black;
+}
+#background {
+	background-image: url(http://vignette1.wikia.nocookie.net/animal-jam-clans-1/images/5/55/Forest-At-Night-21.jpg/revision/latest?cb=20151221203425);
+	-webkit-filter: blur(10px);
+	width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+	top: -15px;
+	left: -15px;
+}
+#white {
+	background: white;
+	width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+	position: fixed;
+}
+::-webkit-input-placeholder {
+	color: rgba(255,255,255,0.5);
+}
+#result {
+    font-style: italic;
+	color: rgba(255,255,255,0.5);
+}
+form {
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+::selection {
+	background: rgba(0, 188, 212,0.2);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#container {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	height: 100px;
+	width:100%;
+}
+#note {
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 300px;
+	width: 500px;
+	background: white;
+	box-shadow: 0 1px 3px black;
+	color: #333;
+	display: none;
+}
+#note h1 {
+	margin: 0 10px;
+	font-size: 40px;
+}
+#note p {
+	margin: 0 10px;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+#note #close {
+	position: absolute;
+	margin: 10px;
+	padding: 0;
+	font-size: 10px;
+	bottom: 0;
+	right: 0;
+}
+#sig {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    right: 5px;
+}
+#help {
+	position: fixed;
+	font-size: 15px;
+    bottom: 5px;
+    left: 5px;
+}
+a, #elp {
+	color: #607D8B;
+	text-decoration: none;
+}
+a:hover, #elp:hover {
+	border-bottom: #607D8B 1px solid;
+}
+a:active, #elp:active {
+	color: white;
+	border-bottom: white 1px solid;
+}

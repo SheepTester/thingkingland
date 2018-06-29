@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Happy Holidays</title>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				font-family: 'Oswald', sans-serif;
+				background: #4d535f;
+				color: white;
+				margin: 0;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			a {color: white;text-decoration: none;}
+			#cookie {
+				margin-top: 100px;
+				margin-left: 100px;
+				width: 202px;
+				height: 273px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			#cookie:hover {
+				margin-top: 80px;
+				margin-left: 80px;
+				width: 243px;
+				height: 327px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			#cookie:active {
+				margin-top: 120px;
+				margin-left: 120px;
+				width: 162px;
+				height: 219px;
+				transition: width .5s, height .5s, margin-top .5s, margin-left .5s;
+			}
+			#ctree {
+				position: absolute;
+				left: 400px;
+				top: 50px;
+				width: 234px;
+				height: 506px;
+			}
+			li {
+				display: inline-block;
+				position: absolute;
+				height: 80px;
+				width: 80px;
+				z-index: 1;
+			}
+			#snow {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+			p {
+				font-size: 2em;
+				width: 350px;
+				margin-left: 20px;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://cacpg.herokuapp.com/js/demos/snowfall.min.js"></script>
+		<script src="eight.js"></script>
+	</head>
+	<body>
+		<ul id="snow">
+		</ul>
+		<img id="cookie" src="present.png"/>
+		<img id="ctree" src="tree.png"/>
+		<ul id="tree">
+		</ul>
+		<p>Click on the present to put presents under the tree.</p>
+	</body>
+</html>

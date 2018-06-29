@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>One Command Creator</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				background: #313371;
+				color: white;
+				font-family: 'Roboto', sans-serif;
+			}
+			img {
+				height: 50px;
+				width: 50px;
+				border-radius: 5px;
+			}
+			li {
+				display: block;
+			}
+			input[type="text"] {
+				font-family: 'Roboto', sans-serif;
+				border: 0;
+				background: white;
+				color: #313371;
+				font-size: 20px;
+				height: 25px;
+				width: 90%;
+				border-radius: 5px;
+				float: left;
+				margin-bottom: 2px;
+				margin-right: 2px;
+			}
+			input[type="text"]:focus {
+				outline: none;
+			}
+			.remove {
+				height: 25px;
+				width: 25px;
+				background: #EE6B6B;
+				border-radius: 50%;
+				float: left;
+			}
+			.redstone {
+				height: 25px;
+				width: 90%;
+				border-radius: 5px;
+				float: left;
+				margin-bottom: 2px;
+				margin-right: 2px;
+				background: #B40000;
+			}
+			#done {
+				height: 10px;
+				width: 105px;
+				border-radius: 5px;
+				background: #6BCF00;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="occ.js"></script>
+	</head>
+	<body>
+		<h1>One Command Creator</h1>
+		<h2>Made by <a href="https://plus.google.com/u/0/101749103627562194088/">Sean</a></h2>
+		<p>Click on the command block and redstone block buttons to add blocks to the tower of blocks that will be created.
+		For the command blocks, you can click on the white rectangles and type in the commands.
+		When you are done, click the green line and it will generate the command to paste into a command block.
+		Thanks to Minecraft, made by Mojang and Google Fonts for the Roboto font and the internet for info on HTML. -Sean</p>
+		<img src="command.jpg" id="newCommandBlock"/>
+		<img src="redstone.png" id="newRedstoneBlock"/>
+		<div id="done"></div>
+		<textarea rows="5" cols="12">click the green bar above to generate the command</textarea>
+		<ul>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+/summon FallingSand ~ ~1 ~ {
+Time:1,Block:redstone_block,Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:fill ~ ~1 ~ ~ ~-5 ~ air},Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:},Riding:{id:FallingSand,
+Time:1,Block:redstone_block,Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:setblock ~ ~-1 ~ redstone_block},Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:},Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:fill ~1 ~-1 ~ ~1 ~-2 ~ redstone_block},Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:fill ~1 ~-1 ~ ~1 ~3 ~ redstone_block},Riding:{id:FallingSand,
+Time:1,Block:command_block,TileEntityData:{Command:fill ~1 ~ ~ ~1 ~4 ~ stone
+}}}}}}}}}}

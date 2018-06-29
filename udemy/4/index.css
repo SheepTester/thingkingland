@@ -1,0 +1,93 @@
+.square {
+	background: #E14848;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+.circle {
+	background: #97BF13;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+}
+body {
+	font-family: sans-serif;
+	color: #333;
+}
+#victor {
+	height: 40px;
+	width: 200px;
+	background: #D51786;
+	border: 5px solid #BD1577;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+#victim {
+	font-size: 20px;
+}
+#victee {
+	height: 40px;
+	width: 200px;
+	background: #F9E106;
+	border: 5px solid #E1CB05;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+#wrapper {
+	width: 600px;
+	margin: 0 auto;
+	font-family: helvetica;
+	font-size: 20px;
+	color: #111;
+}
+input {
+	width: 390px;
+	height: 20px;
+	border-radius: 5px;
+	background: #eee;
+	border: 0;
+	font-size: 20px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+label {
+	width: 200px;
+	float: left;
+	padding-top: 5px;
+}
+#submitButton {
+	height: 30px;
+	margin-left: 200px;
+	width: 400px;
+}
+#error {
+	background: #F44336;
+	color: white;
+	display: none;
+	margin-bottom: 10px;
+}
+#error p {
+	padding-left: 10px;
+	margin: 0;
+}
+#sq {
+	height: 200px;
+	width: 200px;
+	background: #607D8B;
+}
+#drag {
+	width: 200px;
+}
+#resz {
+	height: 100px;
+	width: 100px;
+	background: #E91E63;
+	color: white;
+}

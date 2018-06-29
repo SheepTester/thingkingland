@@ -1,0 +1,101 @@
+body {
+	background: black;
+    font-family: 'Comfortaa', sans-serif;
+	color: white;
+	margin:0;
+	padding: 0;
+}
+#header {
+	width: 100%;
+	height: 40px;
+	background: rgba(255,255,255,0.2);
+}
+#logo {
+	padding: 5px 0 0 20px;
+	font-size: 120%;
+	float: left;
+}
+#run {
+	float:right;
+	margin: 5px 10px 0 0;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	height: 20px;
+	width: 40px;
+	font-size: 120%;
+	background: rgba(255,255,255,0.1);
+}
+.clear {
+	clear:both;
+}
+#toggles {
+	margin: 0 auto;
+	list-style: none;
+	width: 197px;
+	background: rgba(255,255,255,0.2);
+	height: 40px;
+	padding: 0;
+}
+#toggles li {
+	float: left;
+	padding: 10px 10px;
+}
+#toggles li:hover, #run:hover {
+	background: rgba(255,255,255,0.2);
+}
+#toggles li:active, #run:active {
+	background: rgba(255,255,255,0.3);
+}
+.selected {
+	background: rgba(255,255,255,0.4) !important;
+}
+.selected:hover {
+	background: rgba(255,255,255,0.5) !important;
+}
+.selected:active {
+	background: rgba(255,255,255,0.6) !important;
+}
+.code {
+	transition: width .5s;
+	float: left;
+	position: relative;
+	width: 50%;
+	display: block;
+}
+.unselect {
+	width: 0% !important;
+	transition: width .5s;
+}
+.code textarea {
+	width: 100%;
+	height: 100%;
+	border:none;
+	font-family: courier;
+	font-size: 12px;
+	padding: 0;
+}
+.code textarea:focus {
+	outline: none;
+}
+.code iframe {
+	width: 100%;
+	height: 100%;
+	border:none;
+	background: white;
+}
+.label {
+	color: black;
+	opacity: 0.3;
+	position: absolute;
+	z-index: 1000;
+	display: block;
+}
+.label:hover {
+	display: none;
+}
+.unselect .label {
+	display: none;
+}
+::selection {
+	background: rgba(0, 188, 212,0.2);
+}

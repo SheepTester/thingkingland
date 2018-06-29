@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Six</title>
+		<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<style>
+			body {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				font-family: 'Oswald', sans-serif;
+				background: black;
+				color: black;
+				margin: 0;
+			}
+			::-webkit-scrollbar { 
+				display: none; 
+			}
+			ul {
+				padding: 0;
+				font-size: 0
+			}
+			li {
+				display: inline-block;
+				transition: background .5s;
+				height: 50px;
+				width: 50px;
+				text-align: center;
+				font-size: 30px;
+			}
+			#button li {
+				height: 50px;
+				width: 50px;
+				border-radius: 15px;
+				transition: border-radius .5s;
+				margin-right: 5px;
+			}
+			#button li:hover {border-radius: 0;transition: border-radius .5s;}
+			#button li:active {border-radius: 25px;transition: border-radius .5s;}
+			.red {background: #F44336;}
+			.dorange {background: #FF5722;}
+			.orange {background: #FF9800;}
+			.amber {background: #FFC107;}
+			.yellow {background: #FFEB3B;}
+			.lime {background: #CDDC39;}
+			.lgreen {background: #8BC34A;}
+			.green {background: #4CAF50;}
+			.teal {background: #009688;}
+			.cyan {background: #00BCD4;}
+			.lblue {background: #03A9F4;}
+			.blue {background: #2196F3;}
+			.indigo {background: #3F51B5;}
+			.dpurple {background: #673AB7;}
+			.purple {background: #9C27B0;}
+			.pink {background: #E91E63;}
+			.white {background: #FFFFFF;}
+			.grey {background: #9E9E9E;}
+			.bgrey {background: #607D8B;}
+			.black {background: #000000;}
+			.brown {background: #795548;}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="six.js"></script>
+	</head>
+	<body>
+		<ul id="button">
+			<li class="red"></li>
+			<li class="dorange"></li>
+			<li class="orange"></li>
+			<li class="amber"></li>
+			<li class="yellow"></li>
+			<li class="lime"></li>
+			<li class="lgreen"></li>
+			<li class="green"></li>
+			<li class="teal"></li>
+			<li class="cyan"></li>
+			<li class="lblue"></li>
+			<li class="blue"></li>
+			<li class="indigo"></li>
+			<li class="dpurple"></li>
+			<li class="purple"></li>
+			<li class="pink"></li>
+			<li class="white"></li>
+			<li class="grey"></li>
+			<li class="bgrey"></li>
+			<li class="black"></li>
+			<li class="brown"></li>
+		</ul>
+	</body>
+</html>

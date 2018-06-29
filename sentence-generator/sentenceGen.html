@@ -1,0 +1,46 @@
+<html>
+	<!-- SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ -->
+	<head>
+		<title>Sentence Generator</title>
+		<style>
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+}
+body {
+	font-family: 'Roboto', arial, sans-serif;
+	background: black;
+	color: white;
+}
+#button {
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+	border: 1px solid white;
+	transition: background .2s;
+	width: 65px;
+}
+#button:hover {
+	background: rgba(255,255,255,0.2);
+}
+#button:active {
+	background: rgba(255,255,255,0.4);
+}
+::selection {
+    background: rgba(0, 188, 212, 0.4);
+}
+		</style>
+	</head>
+	<body>
+		<p>This is a sentence.</p>
+		<div id="button">Generate</div>
+		<script src="words.js" type="text/javascript"></script>
+		<script src="gen.js" type="text/javascript">		</script>
+	</body>
+</html>

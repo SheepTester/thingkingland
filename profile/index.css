@@ -1,0 +1,145 @@
+/*
+SEAN MADE THIS.
+https://plus.google.com/u/0/+SeanYentheHumansperson
+
+Styling.
+*/
+body {
+	font-family: 'Roboto Slab', serif;
+	background: white;
+	margin: 0;
+	color: #E0E0E0;
+	transition: background .2s;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::selection {
+    background: rgba(0, 188, 212, 0.4);
+}
+.sidebar, .content {
+	background: #212121;
+	height: 100%;
+	overflow: overlay;
+	position: fixed;
+	transition: background .2s;
+}
+.sidebar {
+	width: 250px;
+	left:0;
+}
+.content {
+	width: calc(100% - 250px);
+	right:0;
+}
+.content:hover, .sidebar:hover {
+	background: #009688;
+}
+.sidebar h1 {
+	margin: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: normal;
+	line-height: 1;
+}
+.sidebar h1#biggest {
+	font-size: 190px;
+}
+.sidebar h1#bigger {
+	font-size: 50px;
+}
+a:not([name=""]) {
+	margin: 0;
+}
+.page {
+	height: 100vh;
+	width: 100%;
+}
+.sidebar a {
+	font-size: 30px;
+}
+a {
+	text-decoration: none;
+	color: #E0E0E0;
+	padding-bottom: 2px;
+	margin-left: 10px;
+}
+.content a {
+	color: #4DB6AC;
+	border-bottom-color: #4DB6AC !important;
+}
+a:hover {
+	border-bottom: 1px solid #e0e0e0;
+	padding-bottom: 1px;
+}
+a:active {
+	border-bottom: 2px solid #e0e0e0;
+	padding-bottom: 0;
+}
+.sidebar hr {
+	margin: 10px;
+	border: none;
+	border-top: 1px solid #e0e0e0;
+}
+.page h1 {
+	font-size: 50px;
+	margin: 0 5px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.page p {
+	font-size: 20px;
+	margin-left: 10px;
+}
+.content::-webkit-scrollbar {
+    display: block;
+	background: none;
+	width: 5px;
+}
+.content::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
+	background: none !important;
+}
+.content::-webkit-scrollbar-thumb {
+	background: rgba(255,255,255,0.3);
+}
+.content::-webkit-scrollbar-thumb:hover {
+	background: rgba(255,255,255,0.5);
+}
+.soc {
+	margin: 10px;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background: white;
+	transition: background 5s;
+}
+.soc:hover {
+	transition: background .2s;
+}
+.page:last-child a {
+	padding-bottom: 0 !important;
+	border-bottom: none !important;
+}
+#google:hover {
+	background: #DC4B3F;
+}
+#scratch:hover {
+	background: #F8A839;
+}
+#instasuck:hover {
+	background: #DF3967;
+}
+#thing:hover {
+	background: #00BCD4;
+}
+#fiddle:hover {
+	background: #1C90F3;
+}
+#yt:hover {
+	background: #E62117;
+}
+#code:hover {
+	background: #1F4056;
+}
+#git:hover {
+	background: #333333;
+}

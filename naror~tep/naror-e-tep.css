@@ -1,0 +1,45 @@
+/* SEAN MADE THIS. https://plus.google.com/u/0/101749103627562194088/ */
+body {
+	font-family: 'Oswald', Impact, sans-serif;
+	font-size: 50px;
+	margin:0;
+	color: white;
+	background: #212224;
+    line-height: 1;
+}
+p {
+	margin: 0;
+}
+::selection {
+	background: rgba(0, 188, 212,0.4);
+}
+#container {
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 350px;
+	width: 600px;
+	text-align: center;
+}
+#time {
+	font-size: 150px;
+}
+.num {
+	font-size: 100px;
+}
+.num:before, .num:after {
+	color: #999;
+	font-size: 30px;
+}
+#year:before {
+	content: "year";
+}
+#year:after {
+	content: "ce";
+}
+#day:before {
+	content: "day";
+}

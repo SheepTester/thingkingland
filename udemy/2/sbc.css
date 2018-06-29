@@ -1,0 +1,176 @@
+body {
+	margin:0;
+	font-family: arial, helvetica, sans-serif;
+}
+#tbar {
+	background:#7A0000;
+	width:100%;
+	height:40px;
+	color: white;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+.fixedw {
+	width:1100px;
+	margin:0 auto;
+}
+#logo {
+	padding-top:5px;
+	float: left;
+	border-right: 1px solid #990000;
+	padding-right: 10px;
+}
+#signin {
+	padding: 10px 50px 12px 10px;
+	float: left;
+	border-right: 1px solid #990000;
+}
+#signin img {
+	position:relative;
+	top:3px;
+}
+#tmenu {
+	float: left;
+}
+#tmenu ul {
+	padding:0;
+	margin:0;
+}
+#tmenu li {
+	list-style:none;
+	border-right: 1px solid #990000;
+	height: 100%;
+	padding:12px 10px 12px 10px;
+	float:left;
+}
+#search {
+	float:left;
+	padding: 5px 0 0 10px;
+}
+#search input {
+	height: 25px;
+	border:none;
+	font-size:1.2em;
+	font-weight: bold;
+	font-size: 0.9em;
+	padding-left:10px;
+	background-image:url("rsz_1search.jpg");
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+.break {
+	clear:both;
+}
+#nbar {
+	background:#990000;
+	width:100%;
+	height:90px;
+	color: white;
+}
+#nbar p {
+	margin: 0;
+	padding:0;
+	padding-top:10px;
+	float:left;
+}
+#nhed {
+	font-size:3em;
+}
+#hsh {
+	font-size:0.7em;
+	padding-left:20px;
+}
+#rss {
+	float:right;
+	margin-top:30px;
+}
+#topic {
+	
+}
+#topic ul {
+	background: #3E0C0D;
+	padding:5px 0 0 5px;
+	margin: 0;
+	height:20px;
+}
+#topic li {
+	list-style:none;
+	font-size: 0.8em;
+	border-right: 1px solid #990000;
+	float:left;
+	padding: 0 6px;
+}
+.select {
+	background: #ededed;
+	color: #666;
+	height:100%;
+	position: relative;
+	top: -4px;
+	padding-top: 4px !important;
+}
+#content {
+	width:100%;
+	color: #535353;
+	font-size: 0.75em;
+}
+h1 {
+	color: #1F4f82;
+	font-size:2.5em;
+}
+.himg {
+	float: left;
+}
+.newsitem {
+	position: relative;
+	left:10px;
+	top: -15px;
+	width: 300px;
+	float:left;
+	font-size: 1.1em;
+}
+a {
+	color: #1F4f82;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.vid {
+	background-image:url("right.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 20px 20px;
+	padding-left:20px;
+}
+.links {
+	line-height: 1.6em;
+}
+#wl {
+	background: #eee;
+	float: right;
+	width: 380px;
+	position: relative;
+	top: -80px;
+}
+h2 {
+	color: #505050;
+	margin: 10px 0 10px 10px;
+	font-size: 1.8em;
+}
+#wl ul {
+	margin:0;
+	padding:0 10px 10px 10px;
+}
+#wl li {
+	list-style: none;
+	background-image:url("red.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 10px 10px;
+	padding:10px 0 10px 20px;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+.bb {
+	border-bottom: 1px solid #ddD;
+}
