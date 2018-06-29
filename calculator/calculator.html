@@ -44,7 +44,7 @@ body {
 	background: black;
 }
 #background {
-	background-image: url(http://vignette1.wikia.nocookie.net/animal-jam-clans-1/images/5/55/Forest-At-Night-21.jpg/revision/latest?cb=20151221203425);
+	background-image: url(../dark-forest.jpg);
 	-webkit-filter: blur(10px);
 	width: 110%;
     height: 110%;
@@ -143,7 +143,7 @@ a:active, #elp:active {
 	color: white;
 	border-bottom: white 1px solid;
 }</style>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="../jquery-latest.min.js"></script>
 	</head>
 	<body>
 		<div id="background"></div>
@@ -285,7 +285,7 @@ function calculate(e,id){
 	if (isNaN(ob[id][0])&&!p.includes(ob[id][0])){
 		ob[id].shift();
 	}
-	
+
 	if (ob[id].includes("(")||ob[id].includes("√")||ob[id].includes("|")||ob[id].includes("š")||ob[id].includes("ç")||ob[id].includes("¦")){
 		for(var l=0;l<ob[id].length;l++){
 			if (p.includes(ob[id][l])){
@@ -357,7 +357,7 @@ function calculate(e,id){
 			}
 		}
 	}
-	
+
 	if (ob[id].length>1){
 		return "Error";
 	} else if (ob[id].length==0||ob[id][0]=="") {

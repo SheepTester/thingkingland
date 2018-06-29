@@ -36,7 +36,7 @@ body {
 	background: black;
 }
 #background {
-	background-image: url(http://vignette1.wikia.nocookie.net/animal-jam-clans-1/images/5/55/Forest-At-Night-21.jpg/revision/latest?cb=20151221203425);
+	background-image: url(../dark-forest.jpg);
 	-webkit-filter: blur(10px);
 	width: 110%;
     height: 110%;
