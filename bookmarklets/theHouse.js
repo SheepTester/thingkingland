@@ -1,4 +1,6 @@
-// document.styleSheets[0].addRule('::selection', 'background: rgba(0, 188, 212, 0.4);');
+document.head.insertBefore(document.createElement('style'), document.head.firstChild);
+
+document.styleSheets[0].addRule('::selection', 'background: rgba(0, 188, 212, 0.4);');
 if (!window.jQuery) {
 	var s = document.createElement("div");
 	s.innerHTML="No jQuery";
