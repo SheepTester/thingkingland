@@ -38,7 +38,7 @@ fs.writeFile('./sitemap.html', `
   </head>
   <body>
     <h1>Thingkingland sitemap</h1>
-    ${links.map(l => `<p><a href="./${l}">${l}</a></p>`).join('')}
+    ${links.map(l => `<p><a href="./${l.replace(/index\.html$/, '')}">${l}</a></p>`).join('\n')}
   </body>
   <!-- MADE BY SEAN -->
 </html>`, (err) => {});
