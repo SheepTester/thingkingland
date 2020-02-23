@@ -1,6 +1,8 @@
 <html>
 	<head>
 		<title>Prime Number Finder</title>
+		<script src="../jquery-latest.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#calculate').click(function(){
@@ -13,12 +15,12 @@
 						var list_number = 1;
 						var factors = 0;
 						for (var e = 0 ; e < primes.length; e+=1) {
-							if (number % primes[list_number] = 0) {
+							if (number % primes[list_number] == 0) {
 								factors = factors + 1;
 							}
 							list_number = list_number + 1;
 						}
-						if (factors = 0) {
+						if (factors == 0) {
 							primes[primes.length] = number;
 						}
 						else {
@@ -29,7 +31,6 @@
 				});
 			});
 		</script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 		<style>
 			#prime_selector {
 				font-family: Helvetica;
@@ -76,6 +77,6 @@
 		<div id="prime_selector">Max Number: <input type="text" id="max"></div>
 		<div id="calculate">Find</div>
 		<div id="list"><span id="primes">Primes</span></div>
-		<a href="file:///C:/Shared/Sean/sitemap.html">back</a>
+		<a href="sitemap.html">back</a>
 	</body>
 </html>
