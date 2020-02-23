@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>Prime Number Finder</title>
+		<script>
+			$(document).ready(function(){
+				$('#calculate').click(function(){
+					var max = $("#max").val();
+					var primes = [];
+					var composite = [];
+					primes[0] = 2;
+					var number = 2;
+					for (var i = 0 ; i < max - 1; i+=1) {
+						var list_number = 1;
+						var factors = 0;
+						for (var e = 0 ; e < primes.length; e+=1) {
+							if (number % primes[list_number] = 0) {
+								factors = factors + 1;
+							}
+							list_number = list_number + 1;
+						}
+						if (factors = 0) {
+							primes[primes.length] = number;
+						}
+						else {
+							composite[composite.length] = number;
+						}
+					}
+					$('#primes').html("The prime numbers up to " + max + " are: " + primes)
+				});
+			});
+		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+		<style>
+			#prime_selector {
+				font-family: Helvetica;
+				font-size: 20px;
+				color: black;
+			}
+			input {
+				border: 0;
+				padding: 12px;
+				border-radius: 10;
+				font-size: 33px;
+				background: yellow;
+			}
+			#calculate {
+			    cursor: pointer;
+			    text-align: center;
+			    width: 200px;
+			    padding: 5px;
+			    margin: 10px;
+			    margin-left: auto;
+			    margin-right: auto;
+			    border: 1px solid yellow;
+			    border-radius: 10px;
+			    background: cyan;
+			    font-weight: bold;
+			    height: 28px;
+			    color: yellow;
+			}
+			#list {
+			    margin: 40px 5px;
+			    padding: 20px;
+			    border-radius: 10px;
+			    border: 1px solid cyan;
+			    font-weight: bolder;
+			    background: yellow;
+			    font-size: 20px;
+			    line-height: 40px;
+			    text-align: center;
+			    color: cyan;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="prime_selector">Max Number: <input type="text" id="max"></div>
+		<div id="calculate">Find</div>
+		<div id="list"><span id="primes">Primes</span></div>
+		<a href="file:///C:/Shared/Sean/sitemap.html">back</a>
+	</body>
+</html>
