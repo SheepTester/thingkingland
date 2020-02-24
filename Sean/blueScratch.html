@@ -3,7 +3,6 @@
     <title>Scratch - Imagine, Program, Share</title>
         <link href="blueScratch_files/main.css" rel="stylesheet" type="text/css">
 <link href="blueScratch_files/homepage.css" rel="stylesheet">
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static//js/jquery.min.js"></script>
   </head>
   <body class="">
     <div id="pagewrapper">
@@ -21,15 +20,6 @@
           <input type="hidden" name="sort_by" value="datetime_shared">
           </form>
           <ul class="account-nav logged-in"><li class="messages"><a title="messages - updates and notices" href="https://scratch.mit.edu/messages/" class="messages-icon"><span class="notificationsCount none" style="top: -30px;">0</span></a></li><li class="my-stuff"><a title="my stuff - manage projects and studios" href="https://scratch.mit.edu/mystuff/" class="mystuff-icon"></a></li><li class="logged-in-user dropdown"><span class="user-name dropdown-toggle" data-toggle="dropdown"><img class="user-icon" src="https://cdn2.scratch.mit.edu/get_image/user/3290075_32x32.png?v=1437864524.54" width="24" height="24">Sheep_tester<span class="caret"></span></span><div class="dropdown-menu blue"><ul class="user-nav"><li><a href="https://scratch.mit.edu/users/Sheep_tester/">Profile</a></li><li><a href="https://scratch.mit.edu/mystuff/">My Stuff</a></li><li><a href="https://scratch.mit.edu/accounts/settings/">Account settings</a></li><li class="logout divider"><a href="https://scratch.mit.edu/accounts/logout/?next=/">Sign out</a></li></ul></div></li></ul>
-          <script type="text/template" id="template-account-nav-logged-out">
-          <ul class="account-nav" >
-              <li class="join-scratch" data-control="registration"><span class=""><span>Join Scratch</span></span></li><li id="login-dropdown" class="sign-in dropdown"><span data-toggle="dropdown" class="dropdown-toggle"><span>Sign in</span></span><div class="popover bottom dropdown-menu"><div class="arrow"></div><div class="popover-content" ><form method="post" id="login" action="#"><label for="username">Username</label><input type="text" id="login_dropdown_username" name="username" maxlength="30" class="wide username" /><label for="password" class="password">Password</label><input type="password" name="password" class="wide password" /><div class="ajax-loader" style="display:none; float: left;"></div><button type="submit">Sign in</button><span class="forgot-password"><a href="https://scratch.mit.edu/accounts/password_reset/">Forgot password?</a></span><div class="error"></div></form></div></div></li><li data-control="modal-login" class="sign-in mobile"><span>Sign in</span></li>
-          </ul>
-          </script>
-          <script type="text/template" id="template-account-nav-logged-in">
-          <ul class="account-nav logged-in"><li class="messages"><a title="messages - updates and notices" href="https://scratch.mit.edu/messages/" class="messages-icon"><span class="notificationsCount none">0</span></a></li><li class="my-stuff"><a title="my stuff - manage projects and studios" href="https://scratch.mit.edu/mystuff/" class="mystuff-icon"></a></li><li class="logged-in-user dropdown"><span class="user-name dropdown-toggle" data-toggle="dropdown"><img class="user-icon" src="<%= LOGGED_IN_USER.model.thumbnail_url %>" width="24" height="24"><%= LOGGED_IN_USER.model.username_truncated %><span class="caret"></span></span><div class="dropdown-menu blue" ><ul class="user-nav"><li><a href="<%= LOGGED_IN_USER.model.profile_url %>">Profile</a></li><li><a href="https://scratch.mit.edu/mystuff/">My Stuff</a></li><% if (LOGGED_IN_USER.model.is_educator){ %><li><a href="https://scratch.mit.edu/educators/classes/">My Classes</a></li><% } %><li><a href="https://scratch.mit.edu/accounts/settings/">Account settings</a></li><li class="logout divider"><a href="https://scratch.mit.edu/accounts/logout/?next=/">Sign out</a></li></ul></div></li></ul>
-          </script>
-          <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static/js/account-nav.js"></script>
         </div>
         <iframe class="iframeshim" frameborder="0" scrolling="no">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</iframe>
       </div>
@@ -2442,127 +2432,6 @@
         <div id="registration" class="registration modal hide fade" data-backdrop="static">
           <iframe class="iframeshim" frameborder="0" scrolling="no">&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</iframe>
         </div>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static//js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static/js/main.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    // load gaq script
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static/js/base.js" charset="utf-8"></script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static/js/lazyload.js" charset="utf-8"></script>
-<script>
-sessionStorage.removeItem("gallery_id")
-sessionStorage.removeItem("explore_by")
-</script>
-<script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static//js/homepage.js"></script>
-<script type="text/template" id="template-collection-count">
-  <%= count %>
-</script>
-<script type="text/template" id="template-comment-actions">
-<% if (can_delete) { %>
-  <span data-control="delete" class="actions report">Delete</span>
-<% } %>
-<% if (current_user != comment_user) { %>
-  <span data-control="report" class="actions report">Report</span>
-<% } %>
-</script>
-<script type="text/template" id="template-modal-login">
-<div class="modal hide fade in" id="login-dialog" style="width: 450px">
-  <form method="post" action="https://scratch.mit.edu/login/">
-    <fieldset>
-      <div class="modal-header">
-        <a href="#" data-dismiss="modal" class="close">x
-        </a>
-        <h3>Login</h3>
-      </div>
-      <div class="modal-body">
-        <div class="control-group">
-        <label class="control-label" for="username">Username
-          </label>
-          <div class="controls">
-            <input id="username" type="text" name="username" maxlength="30" />
-          </div>
-        </div>
-        <div class="control-group">
-        <label class="control-label" for="password">Password
-          </label>
-          <div class="controls">
-            <input type="password" name="password" id="password" />
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <span class="error">
-        </span>
-        <span class="button primary" id="sign-in" data-control="site-login">
-        <span>{% trans "Sign in" $}
-          </span>
-        </span>
-      </div>
-    </fieldset>
-  </form>
-</div>
-</script>
-<script type="text/template" id="template-comment-reply">
-  <form>
-    <div class="control-group tooltip right">
-      <textarea name="content"></textarea>
-      <span class="hovertext error" data-control="error" data-content="comment-error"><span class="arrow"></span><span class="text"></span></span>
-      <span class="small-text">You have <span id="chars-left-<%= comment_id %>">500</span> characters left.</span>
-    </div>
-    <div class="control-group">
-        <div class="button small" data-parent-thread="<%= thread_id %>" data-commentee-id="<%= commentee_id %>" data-control="post"><a href="#null">Post</a></div>
-        <div class="button small grey" data-control="cancel"><a href="#null">Cancel</a></div>
-      <span class="notification"></span>
-    </div>
-  </form>
-</script>
-<script type="text/template" id="template-deletion-canceled">
-<div class="deletion-canceled">
-  <div class="form">
-    <p>
-    Your account was scheduled for deletion but you logged in. Your account has been reactivated. If you didn’t request for your account to be deleted, you should <a href="https://scratch.mit.edu/accounts/password_change/">change your password</a> to make sure your account is secure.
-    </p>
-  </div>
-</div>
-</script>
-<script type="text/template" id="template-unsupported-browser">
-  <div class="unsupported-browser banner" data-cue="unsupported_browser">
-    <div class="container">
-      <span>Scratch works best on newer browsers. We suggest you upgrade to <a href="https://scratch.mit.edu/info/faq/#requirements">a supported browser</a>, <a href="https://scratch.mit.edu/scratch2download/">download the offline editor</a>, <a href="http://wiki.scratch.mit.edu/wiki/List_of_Bug_Workarounds">or read about common workarounds</a>.</span>
-      <div class="close">x</div>
-    </div>
-  </div>
-</script>
-<script type="text/template" id="template-unsupported-msie">
-  <div class="unsupported-browser banner" data-cue="unsupported_browser">
-    <div class="container">
-      <span>Scratch will stop supporting Internet Explorer 8 on April 30, 2015. We suggest you upgrade to <a href="https://scratch.mit.edu/info/faq/#requirements">a supported browser</a>, <a href="https://scratch.mit.edu/scratch2download/">download the offline editor</a>, or <a href="http://wiki.scratch.mit.edu/wiki/List_of_Bug_Workarounds">read about common workarounds</a>.</span>
-      <div class="close">x</div>
-    </div>
-  </div>
-</script>
-    <script type="text/javascript" src="https://scratch.mit.edu/jsi18n/"></script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static/js/lib/jquery.timeago.settings.js"></script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static//js/apps/registration/main.js"></script>
-    <script type="text/javascript" src="https://cdn.scratch.mit.edu/scratchr2/static//js/apps/global.js"></script>
-    <script>
-      Scratch.NotificationPollTime = 300000;
-    </script>
-    <script type="text/javascript">
-      var contentLanguage = "en";
-      var cookieLanguage = getCookie("scratchlanguage");
-      if (contentLanguage != cookieLanguage) {
-          setCookie("scratchlanguage", contentLanguage);
-      }
-    </script>
-    <script>
-    $(document).on("accountnavready", function(e){
-        $('#topnav .messages').notificationsAlert();
-    });
-    </script>
+
+
 </body></html>
